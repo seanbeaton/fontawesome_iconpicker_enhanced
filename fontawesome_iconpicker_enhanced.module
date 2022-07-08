@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function fontawesome_iconpicker_enhanced_field_widget_fontawesome_iconpicker_form_alter(&$element, FormStateInterface $form_state, $context) {
+  $element['value']['#attached']['library'] = [
+      'fontawesome_iconpicker_enhanced/fontawesome-iconpicker'
+    ];
+  $element['value']['#attributes']['autocomplete'] = 'off';
+  $element['#attached']['drupalSettings']['fontawesome_iconpicker_enhanced']['customIcons'] = FALSE;
+  if (file_exists(\Drupal::service('extension.list.module')->getPath('fontawesome_iconpicker_enhanced') . '/json/icons.json')) {
+    $element['#attached']['drupalSettings']['fontawesome_iconpicker_enhanced']['iconsJson'] = file_get_contents(\Drupal::service('extension.list.module')->getPath('fontawesome_iconpicker_enhanced') . '/json/icons.json');
+    $element['#attached']['drupalSettings']['fontawesome_iconpicker_enhanced']['customIcons'] = TRUE;
+  }
+}

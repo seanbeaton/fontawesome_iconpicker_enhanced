@@ -1,0 +1,7 @@
+name: Fontawesome Icon Picker - Enhanced
+type: module
+description: Enhanced version of the Fontawesome Icon Picker.
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+dependencies:
+  - fontawesome_iconpicker:fontawesome_iconpicker

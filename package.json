@@ -1,0 +1,17 @@
+{
+  "name": "fontawesome_iconpicker_enhanced",
+  "version": "1.0.0",
+  "description": "Script to parse icons from FA metadata/icons.json",
+  "main": "fontawesome/parseIcons.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "parseicons": "node parseicons.js"
+  },
+  "author": "Sean Beaton",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.1"
+  }
+}
